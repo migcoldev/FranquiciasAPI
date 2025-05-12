@@ -35,3 +35,18 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Archivos de estado de Terraform
+*.tfstate
+*.tfstate.backup
+
+# Directorio de configuración local de Terraform
+.terraform/
+terraform/.terraform/
+
+# Archivos de bloqueo de Terraform
+*.tfplan
+*.tfvars
+
+# Archivos de salida de ejecución
+crash.log
