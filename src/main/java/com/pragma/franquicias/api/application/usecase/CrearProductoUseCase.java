@@ -1,17 +1,17 @@
 package com.pragma.franquicias.api.application.usecase;
 
-import com.pragma.franquicias.api.domain.model.Franquicia;
-import com.pragma.franquicias.api.domain.repository.FranquiciaRepository;
+import com.pragma.franquicias.api.domain.model.Producto;
+import com.pragma.franquicias.api.domain.repository.ProductoRepository;
 import reactor.core.publisher.Mono;
 
 public class CrearProductoUseCase {
-    private final FranquiciaRepository franquiciaRepository;
+    private final ProductoRepository productoRepository;
 
-    public CrearProductoUseCase(FranquiciaRepository franquiciaRepository) {
-        this.franquiciaRepository = franquiciaRepository;
+    public CrearProductoUseCase(ProductoRepository productoRepository) {
+        this.productoRepository = productoRepository;
     }
 
-    public Mono<Franquicia> execute(Franquicia franquicia) {
-        return franquiciaRepository.save(franquicia);
+    public Mono<Producto> execute(Producto producto) {
+        return productoRepository.save(producto);
     }
 }
